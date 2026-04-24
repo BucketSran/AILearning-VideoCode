@@ -40,6 +40,8 @@ react_system_prompt_template = """
 - 输出 <action> 后立即停止生成，等待真实的 <observation>，擅自生成 <observation> 将导致错误
 - 如果 <action> 中的某个工具参数有多行的话，请使用 \n 来表示，如：<action>write_to_file("/tmp/test.txt", "a\nb\nc")</action>
 - 工具参数中的文件路径请使用绝对路径，不要只给出一个文件名。比如要写 write_to_file("/tmp/test.txt", "内容")，而不是 write_to_file("test.txt", "内容")
+- 你创建/写入的文件必须位于“当前项目目录”下（也就是环境信息里的文件列表所在目录），不要写到 C:\\、D:\\ 等系统其他位置；如果需要新建目录，请在当前项目目录下新建
+- 任何涉及“创建/修改文件”的任务：在给出 <final_answer> 之前，必须至少执行一次 write_to_file；如果你还没写入文件，本轮禁止输出 <final_answer>
 
 ⸻
 

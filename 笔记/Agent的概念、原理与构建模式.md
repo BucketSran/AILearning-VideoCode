@@ -1,4 +1,4 @@
-# AI Learning 学习笔记
+# Agent：概念、原理与构建模式（学习笔记）
 
 > 记录日期：2026-04-24。问题编号来自当日对话记录，可能不连续；内容已按主题尽量整理。
 
@@ -452,7 +452,7 @@ class ReActAgent:  # 定义一个 ReAct Agent 类
 - 容易“短视”：缺少全局计划时，可能走偏、反复兜圈、遗漏收尾步骤。
 - 长任务成本高：上下文膨胀、步骤多时更需要额外约束（预算/停止条件/进度跟踪）。
 
-![ReAct 模式示意图](image.png)
+![ReAct 模式示意图](assets/react.png)
 
 ### 2) Plan-and-Execute（规划-执行）模式
 核心思想：先生成“可追踪的计划（Plan）”，再按计划执行（Execute），执行中根据观测结果动态修订计划（Replan）。
@@ -470,7 +470,7 @@ class ReActAgent:  # 定义一个 ReAct Agent 类
 - 规划开销：计划本身可能不靠谱，需要验证与重规划机制兜底。
 - 粒度难拿捏：计划过粗会失控，过细会拖慢且浪费上下文。
 
-![Plan-and-Execute 模式示意图](image-1.png)
+![Plan-and-Execute 模式示意图](assets/plan-and-execute.png)
 
 ### 3) 核心区别对照（实战向）
 

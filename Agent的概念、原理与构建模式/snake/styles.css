@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    color: #4ade80;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.score-board strong {
+    color: #fbbf24;
+}
+
+#gameCanvas {
+    border: 4px solid #4ade80;
+    border-radius: 10px;
+    background-color: #0f0f23;
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startBtn, #restartBtn {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: white;
+}
+
+#startBtn:hover, #restartBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 222, 128, 0.4);
+}
+
+#restartBtn {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+#restartBtn:hover {
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+}
+
+.instructions {
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.instructions strong {
+    color: #fbbf24;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #ef4444;
+    z-index: 10;
+}
+
+.game-over h2 {
+    color: #ef4444;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.game-over p {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.game-over span {
+    color: #fbbf24;
+    font-weight: bold;
+}
